@@ -1,0 +1,31 @@
+[project]
+name = "etl-01"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Delano Duarte" }
+]
+dependencies = [
+    "pandas>=2.0.3",
+    "sqlalchemy>=2.0.30",
+    "psycopg2>=2.9.9",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[project.scripts]
+hello = "etl_01:hello"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/etl_01"]
